@@ -3,7 +3,15 @@ A simple singly library file for check if a its the first the application is ran
 This simple creates a `run.flag` file that will be made one the first run.
 If this file exists it means that the program has been ran before, if it does not exist that means the file has been ran before
 
-# Example Usage
+# Table of Contents
+
+- [Example](#Example)
+- [Return Values](#Return-Values)
+- [Depdencies](#Dependencies)
+- [FAQ](#FAQ)
+- [Side Note](#Side-Note)
+
+# Examples
 ```c
 #include <stdio.h>
 #include "What ever file you rename firstran.h to"
@@ -37,7 +45,26 @@ int main() {
     return 0;   
 }
 ```
+You may also want to pass in a custom file name for the flag file. You can do that by passing in the filename as an argument.
+For example:
+``` c
+#include <stdio.h>
+#include "What ever file you rename firstran.h to"
 
+int main() {
+    int WasItRan == WasRan("filename.flag");
+
+    if (WasItRan == 0) { // Function WasRan() Returns 0 if the file exists and 1 if it does not
+        printf("It was ran before");
+    } else {
+        printf("it was not ran");
+    }
+
+    return 0;   
+}
+```
+
+If you don't want to have a custom file name simply just don't pass any arguments when calling `WasRan`.
 # Return Values
 | Value | Meaning |
 | ----- | ------- |

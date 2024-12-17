@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "libs/firstran.h"
+#include "libs/crun.h"
 
 int main(void) {
-  int ran = WasRan();
+  int ran = WasRan("file.flag");
 
   if (ran == 1) {
     printf("Hello for the first time\n"); 
