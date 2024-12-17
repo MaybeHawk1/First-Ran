@@ -1,7 +1,7 @@
 # C-Run
-A simple singly library file for check if a its the first the application is ran for the first time.
-This simple creates a `run.flag` file that will be made one the first run.
-If this file exists it means that the program has been ran before, if it does not exist that means the file has been ran before
+A simple singly library file for checking if an application has been ran for the first time. 
+This simply creates a `run.flag` file that will be made on the first run.
+If this file exists it means that the program has been ran before, if it does not exist that means it's the first time the program has been opened.
 
 # Table of Contents
 
